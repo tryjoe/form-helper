@@ -28,6 +28,7 @@
 		"@replit/codemirror-lang-svelte": "^6.0.0",
 		"@steeze-ui/iconic-free": "^1.1.1",
 		"@steeze-ui/svelte-icon": "^1.6.2",
+		"@sveltejs/adapter-static": "^3.0.8",
 		"acorn": "^8.14.1",
 		"acorn-jsx": "^5.3.2",
 		"acorn-jsx-walk": "^2.0.0",
@@ -35,6 +36,7 @@
 		"acorn-walk": "^8.3.4",
 		"codemirror": "^6.0.1",
 		"codemirror-extension-inline-suggestion": "^0.0.3",
-		"shiki": "^3.3.0"
+		"shiki": "^3.3.0",
+		"svelte-adapter-ghpages": "^0.2.2"
 	}
 }
