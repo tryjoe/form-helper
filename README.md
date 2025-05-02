@@ -1,38 +1,34 @@
-# sv
+# Form Helper
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Write svelte form code with shorthand or paste NewForm code and extract basic 
 
-## Creating a project
+You'll still need to include ifs / loops / non-form html etc., but it should be a good starting point 
 
-If you're seeing this, you've probably already done this step. Congrats!
+Also, it's not actually running the code, so any variables etc. used in the form jsx will be missing.
 
-```bash
-# create a new project in the current directory
-npx sv create
+You can also directly edit the shorthand form code to generate the svelte code (if you're not starting with NewForm code)
 
-# create a new project in my-app
-npx sv create my-app
+Shorthand structure:
+
+```
+Component
+  field
+  label
+  choicesVariableName (for Select)
+    key1 label1
+    key2 label2
 ```
 
-## Developing
+components it understands are:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- Checkbox
+- DateInput
+- DateTimeInput
+- MultiCheckbox
+- NumberInput
+- Select
+- Textarea
+- TextInput
+- YesNo
+- Prompt
+- Note
