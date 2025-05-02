@@ -1,0 +1,40 @@
+{
+	"name": "form-helper",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^6.0.0",
+		"@sveltejs/kit": "^2.16.0",
+		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"svelte": "^5.0.0",
+		"vite": "^6.2.6"
+	},
+	"dependencies": {
+		"@codemirror/lang-html": "^6.4.9",
+		"@codemirror/lang-javascript": "^6.2.3",
+		"@codemirror/lang-python": "^6.2.0",
+		"@codemirror/lang-yaml": "^6.1.2",
+		"@codemirror/language": "^6.11.0",
+		"@codemirror/theme-one-dark": "^6.1.2",
+		"@fortawesome/fontawesome-free": "^6.7.2",
+		"@fortawesome/fontawesome-svg-core": "^6.7.2",
+		"@replit/codemirror-lang-svelte": "^6.0.0",
+		"@steeze-ui/iconic-free": "^1.1.1",
+		"@steeze-ui/svelte-icon": "^1.6.2",
+		"acorn": "^8.14.1",
+		"acorn-jsx": "^5.3.2",
+		"acorn-jsx-walk": "^2.0.0",
+		"acorn-static-class-features": "^1.0.0",
+		"acorn-walk": "^8.3.4",
+		"codemirror": "^6.0.1",
+		"codemirror-extension-inline-suggestion": "^0.0.3",
+		"shiki": "^3.3.0"
+	}
+}
