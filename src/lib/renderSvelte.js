@@ -51,8 +51,9 @@ export const renderSvelte = (ast, withReadout = true) => {
       return tag
     } else if(comp.type == "non-input") {
       const content = comp.content? comp.content : "<!-- missing content -->"
-      let tag = `<${comp.element} {readout}>${content}</${comp.element}>`;
-      if(tag.length > 78) tag = `<${comp.element} {readout}>\n  ${content}\n</${comp.element}>`;
+      const readout = withReadout? " {readout}":"";
+      let tag = `<${comp.element}${readout}>${content}</${comp.element}>`;
+      if(tag.length > 78) tag = `<${comp.element}${readout}>\n  ${content}\n</${comp.element}>`;
       return tag;
     }
   })

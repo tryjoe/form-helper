@@ -8,16 +8,6 @@
   import { Icon } from "@steeze-ui/svelte-icon";
   import { Copy } from "@steeze-ui/iconic-free";
 
-  let source = "blah";
-  let outputEditor;
-  let jsxSource;
-  let jsxOutput = null;
-  let shorthandEditor;
-
-  const copy = () => {
-    console.log("copy");
-  };
-
   const comment = `/**
 
 Paste entire .jsx file with NewForm fields here!
@@ -35,7 +25,7 @@ not starting with NewForm code)
 It has the structure:
 
 Component
-  field
+  field ...subfields
   label
   choicesVariableName (for Select)
     key1 label1
@@ -56,6 +46,17 @@ Prompt
 Note
 
 **/`;
+
+  let source = "blah";
+  let outputEditor;
+  let jsxSource;
+  let jsxOutput = null;
+  let shorthandEditor;
+  let includeReadout = true;
+
+  const copy = () => {
+    console.log("copy");
+  };
 
   const updateShorthandWithExtraction = () => {
     const newSrc = astToShorthand(extractFields(jsxSource));
@@ -88,11 +89,13 @@ Note
       <Icon src={Copy} theme="solid" class="color-white" />
     </div>
     <div>
-      <span class="readout-label">Include readout</span><input
-        type="checkbox"
-      />
+      <span class="readout-label">Include readout</span>
+      <input bind:checked={includeReadout} type="checkbox" />
     </div>
-    <CodeView language="svelte" src={renderSvelte(createAst(source))} />
+    <CodeView
+      language="svelte"
+      src={renderSvelte(createAst(source), includeReadout)}
+    />
   </div>
 </div>
 
