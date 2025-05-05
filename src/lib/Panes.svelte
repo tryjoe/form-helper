@@ -43,6 +43,7 @@ Textarea
 TextInput
 YesNo
 Prompt
+Header
 Note
 
 **/`;

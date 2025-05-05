@@ -13,7 +13,8 @@ const inputs = [
 ]
 const nonInputs = [
   'Prompt',
-  'Note'
+  'Note',
+  'Header'
 ]
 const choiceInputs = [
   'Select',

@@ -31,4 +31,5 @@ components it understands are:
 - TextInput
 - YesNo
 - Prompt
+- Header
 - Note

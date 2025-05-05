@@ -16,10 +16,10 @@ export const renderSvelte = (ast, withReadout = true) => {
   $: input = { readout, store };`;
 
   const svelteScript = `<script>
-  import { writable } from "@v2/stores/writable";
+  import { moddable } from "@v2/stores/moddable.js";
   ${sortedImports.join("\n  ")}
 
-  const store = writable({});
+  const store = moddable({});
   ${withReadout ? readoutDefinition : '$: input = { store };'}
   ${choiceDefinitions? '\n' +choiceDefinitions.join("\n"):''}
 </script>
